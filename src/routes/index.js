@@ -1,10 +1,11 @@
-import { Router } from "express"; 
+import { Router } from "express";
 import authRoutes from "./auth.js";
+import userRoutes from "./user.js";
 
 const apiRouter = Router();
 
-//Sets up configuration to use router similar to flask init file.
 apiRouter.use("/auth", authRoutes);
+apiRouter.use("/user", userRoutes);
 
 export default apiRouter;
 
